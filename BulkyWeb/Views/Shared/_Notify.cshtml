@@ -1,27 +1,24 @@
 ﻿
 
-@if (!String.IsNullOrEmpty(TempData["Success"]?.ToString()))
+@if (TempData["Success"]!=null)
 {
-    <div id="successMessage" class="alert alert-success">
-        @Html.Raw(TempData["Success"]?.ToString())
-    </div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["Success"]')
+    </script>
 }
 
-@if (!String.IsNullOrEmpty(TempData["Error"]?.ToString()))
+@if (TempData["Error"]!=null)
 {
-    <div id="errorMessage" class="alert alert-danger">
-        @Html.Raw(TempData["Error"]?.ToString())
-    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.error('@TempData["Error"]')
+    </script>
+
 }
 
-<script>
-    $(document).ready(function () {
-        setTimeout(function () {
-            $('#successMessage').fadeOut('slow');
-            $('#errorMessage').fadeOut('slow');
-        }, 2000); // 2000 milliseconds = 2 seconds
-    });
-
-
-</script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
