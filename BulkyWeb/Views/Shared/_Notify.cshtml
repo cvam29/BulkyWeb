@@ -1,0 +1,27 @@
+﻿
+
+@if (!String.IsNullOrEmpty(TempData["Success"]?.ToString()))
+{
+    <div id="successMessage" class="alert alert-success">
+        @Html.Raw(TempData["Success"]?.ToString())
+    </div>
+}
+
+@if (!String.IsNullOrEmpty(TempData["Error"]?.ToString()))
+{
+    <div id="errorMessage" class="alert alert-danger">
+        @Html.Raw(TempData["Error"]?.ToString())
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#successMessage').fadeOut('slow');
+            $('#errorMessage').fadeOut('slow');
+        }, 2000); // 2000 milliseconds = 2 seconds
+    });
+
+
+</script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
