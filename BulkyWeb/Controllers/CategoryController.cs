@@ -1,8 +1,10 @@
 ﻿using BulkyWeb.Data;
 using BulkyWeb.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyWeb.Controllers;
+[Authorize]
 public class CategoryController(ApplicationDbContext _context) : Controller
 {
     public  IActionResult Index()
