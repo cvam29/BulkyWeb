@@ -1,5 +1,7 @@
-﻿using BulkyWeb.Data;
-using BulkyWeb.Models;
+﻿
+
+using Bulky.DataAccess;
+using Bulky.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
