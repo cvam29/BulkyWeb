@@ -1,6 +1,6 @@
-using BulkyWeb.Data;
-using Microsoft.EntityFrameworkCore;
+using Bulky.DataAccess;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

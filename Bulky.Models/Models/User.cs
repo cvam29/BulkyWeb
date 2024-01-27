@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System.Drawing;
+using System.ComponentModel.DataAnnotations;
 
-namespace BulkyWeb.Models;
+namespace Bulky.Models;
 
 public class User : IdentityUser
 {
