@@ -30,7 +30,7 @@ public class Repository<T>(ApplicationDbContext context) : IRepository<T> where 
         _dbSet.Remove(entity);
     }
 
-    public void IRemoveRange(IEnumerable<T> entities)
+    public void RemoveRange(IEnumerable<T> entities)
     {
         _dbSet.RemoveRange(entities);
     }
