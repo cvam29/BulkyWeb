@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace BulkyWeb.Controllers;
-public class HomeController(ILogger<HomeController> logger) : Controller
+public class HomeController : Controller
 {
 
     public IActionResult Index()

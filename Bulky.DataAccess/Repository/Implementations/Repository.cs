@@ -12,7 +12,7 @@ public class Repository<T>(ApplicationDbContext context) : IRepository<T> where 
         _dbSet.Add(entity);
     }
 
-    public T Get(Expression<Func<T, bool>> filter)
+    public T? Get(Expression<Func<T, bool>> filter)
     {
         IQueryable<T> query = _dbSet.AsQueryable();
         query = query.Where(filter);
